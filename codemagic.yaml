@@ -7,7 +7,10 @@ workflows:
       flutter: stable
 
     scripts:
-      - name: Get Flutter packages
+      - name: Create Android project
+        script: flutter create . --platforms=android
+
+      - name: Get packages
         script: flutter pub get
 
       - name: Build Android APK
